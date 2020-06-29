@@ -23,7 +23,9 @@
       </nav>
     </header>
     <main>
-      <h1>Добро пожаловать в великолепный город Седона.</h1>
+      <h1 class="visually-hidden">
+        Добро пожаловать в великолепный город Седона.
+      </h1>
       <section>
         <h2>Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
         <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
@@ -34,7 +36,7 @@
         <p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
       </section>
       <section>
-        <h2>Преимущества</h2>
+        <h2 class="visually-hidden">Преимущества</h2>
         <ul>
           <li>
             <h3>Жильё</h3>
@@ -83,7 +85,7 @@
         <button type="button">Поиск гостиницы в Седоне</button>
       </section>
       <section>
-        <h2>Местоположение города Седона на карте</h2>
+        <h2 class="visually-hidden">Местонахождение города Седона на карте</h2>
         <img
           src="img/map.jpg"
           width="1199"
@@ -94,12 +96,12 @@
     </main>
     <footer>
       <section>
-        <h2>Контакты</h2>
-        <p><a href="">#visitsedona</a></p>
+        <h2 class="visually-hidden">Контакты</h2>
+        <p>#visitsedona</p>
         <p>Тел: <a href="tel:+74956660166">+7(495) 666-01-66</a></p>
       </section>
       <section>
-        <h2>Социальные сети</h2>
+        <h2 class="visually-hidden">Социальные сети</h2>
         <ul>
           <li><a href="">Twitter</a></li>
           <li><a href="">Facebook</a></li>
@@ -107,7 +109,7 @@
         </ul>
       </section>
       <section>
-        <h2>Разработка сайта</h2>
+        <h2 class="visually-hidden">Разработка сайта</h2>
         <p>
           Website by
           <a href="https://htmlacademy.ru/intensive/htmlcss"
@@ -122,8 +124,68 @@
     </footer>
 
     <section>
-      <h2>Форма поиска гостиниц</h2>
-      <!-- Здесь будет форма для поиска. -->
+      <h2 class="visually-hidden">Форма поиска гостиниц</h2>
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <p>
+          <label for="field-date-visit">Дата заезда:</label>
+          <input
+            id="field-date-visit"
+            type="text"
+            name="date-visit"
+            placeholder="24 апреля 2017"
+          />
+          <button type="button">
+            <span class="visually-hidden">Выбрать дату заезда в календаре</span>
+          </button>
+        </p>
+        <p>
+          <label for="field-date-departure">Дата выезда:</label>
+          <input
+            id="field-date-departure"
+            type="text"
+            name="date-departure"
+            placeholder="4 июля 2017"
+          />
+          <button type="button">
+            <span class="visually-hidden">Выбрать дату выезда в календаре</span>
+          </button>
+        </p>
+        <p>
+          <label for="field-number-of-adult">Взрослые:</label>
+          <button type="button">
+            <span class="visually-hidden"
+              >Уменьшить количество взрослых гостей</span
+            >
+          </button>
+          <input
+            id="field-number-of-adult"
+            type="text"
+            name="number-of-adult"
+            placeholder="2"
+          />
+          <button type="button">
+            <span class="visually-hidden"
+              >Увеличить количество взрослых гостей</span
+            >
+          </button>
+        </p>
+        <p>
+          <label for="field-number-of-children">Дети:</label>
+          <button type="button">
+            <span class="visually-hidden">Уменьшить количество детей</span>
+          </button>
+          <input
+            id="field-number-of-children"
+            type="text"
+            name="number-of-children"
+            placeholder="0"
+          />
+          <button type="button">
+            <span class="visually-hidden">Увеличить количество детей</span>
+          </button>
+        </p>
+        <input type="submit" value="Найти" />
+      </form>
     </section>
   </body>
 </html>
