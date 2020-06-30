@@ -25,7 +25,89 @@
     <main>
       <section>
         <h2 class="visually-hidden">Параметры поискового запроса</h2>
-        <!-- Здесь будет форма поиска -->
+        <form action="https://echo.htmlacademy.ru" method="get">
+          <fieldset>
+            <legend>Инфраструктура:</legend>
+            <ul>
+              <li>
+                <input
+                  id="field-infrastructure-pool"
+                  type="checkbox"
+                  name="infrastructure-pool"
+                  checked
+                />
+                <label for="field-infrastructure-pool">Бассейн</label>
+              </li>
+              <li>
+                <input
+                  id="field-infrastructure-parking"
+                  type="checkbox"
+                  name="infrastructure-parking"
+                />
+                <label for="field-infrastructure-parking">Парковка</label>
+              </li>
+              <li>
+                <input
+                  id="field-infrastructure-wifi"
+                  type="checkbox"
+                  name="infrastructure-wifi"
+                />
+                <label for="field-infrastructure-wifi">Wi-Fi</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Тип жилья:</legend>
+            <ul>
+              <li>
+                <input
+                  id="field-type-hotel"
+                  type="checkbox"
+                  name="type-hotel"
+                  checked
+                />
+                <label for="field-type-hotel">Гостиница</label>
+              </li>
+              <li>
+                <input
+                  id="field-type-motel"
+                  type="checkbox"
+                  name="type-motel"
+                  checked
+                />
+                <label for="field-type-motel">Мотель</label>
+              </li>
+              <li>
+                <input
+                  id="field-type-apartments"
+                  type="checkbox"
+                  name="type-apartments"
+                  checked
+                />
+                <label for="field-type-apartments">Апартаменты</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Стоимость в сутки (Р):</legend>
+            <label for="field-cost-from">От</label>
+            <input
+              id="field-cost-from"
+              type="text"
+              name="cost-from"
+              placeholder="0"
+            />
+            <label for="field-cost-to">До</label>
+            <input
+              id="field-cost-to"
+              type="text"
+              name="cost-to"
+              placeholder="3000"
+            />
+            <!-- Здесь будет кастомный двойной рендж контрол -->
+          </fieldset>
+          <button type="submit">Показать</button>
+        </form>
       </section>
       <section>
         <h2 class="visually-hidden">Фильтр результата</h2>
