@@ -6,6 +6,7 @@
   --basic-close-black: #333333;
   --basic-dark-grey: #666666;
   --basic-light-grey: #ebebeb;
+  --basic-extra-light-grey: #EEEEEE;
   --basic-close-white: #f2f2f2;
   --basic-white-transparent: rgba(255, 255, 255, 0.3);
   --basic-white-footer: rgba(255, 255, 255, 0.9);
@@ -95,6 +96,48 @@ img {
 .main-intro p {
   font-weight: normal;
   color: var(--basic-close-black);
+}
+
+/* Real town block section */
+
+.general-block {
+  background-color: var(--button-light-sky);
+  color: white;
+  font-weight: normal;
+  text-align: center;
+}
+
+.general-block h2 {
+  font-weight: bold;
+  font-size: 21px;
+}
+
+.advantage-list {
+  list-style: none;
+  text-align: center;
+}
+
+.advantage-list h3 {
+  font-size: 21px;
+}
+
+.advantage-list p {
+  font-weight: normal;
+  color: var(--basic-close-black);
+}
+
+.final-advantages {
+  list-style: none;
+  text-align: center;
+  background-color: var(--basic-extra-light-grey);
+  font-weight: normal;
+  color: var(--basic-close-black);
+}
+
+.final-advantages h2 {
+  font-weight: bold;
+  font-size: 21px;
+  color: var(--basic-black);
 }
 
 /* User Interest */
