@@ -2,6 +2,7 @@
 
 :root {
   --basic-black: #000000;
+  --basic-black-transparent: rgba(0, 0, 0, 0.3);
   --basic-close-black: #333333;
   --basic-dark-grey: #666666;
   --basic-light-grey: #ebebeb;
@@ -171,4 +172,144 @@ img {
 
 .list-socials a:active {
   background-color: var(--button-dark-sky);
+}
+
+/* Catalog hotels */
+
+.hotel-items {
+  list-style: none;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.hotel-items h3 {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+}
+
+.hotel-title {
+  color: var(--basic-black);
+}
+
+.hotel-title:focus,
+.hotel-title:hover {
+  color: var(--button-light-sky);
+}
+
+.hotel-title:active {
+  color: var(--basic-black);
+  opacity: 0.3;
+}
+
+.hotel-info {
+  color: var(--basic-close-black);
+}
+
+.hotel-rating {
+  background-color: var(--basic-close-white);
+  color: var(--basic-dark-grey);
+}
+
+.button-hotel-item {
+  font-weight: bold;
+  
+  color: var(--basic-white);
+}
+
+.button-hotel-item:active {
+  color: var(--basic-white-transparent);
+}
+
+.button-hotel-details {
+  background-color: var(--button-light-sky);
+}
+
+.button-hotel-details:hover,
+.button-hotel-details:focus {
+  background-color: var(--button-normal-sky);
+}
+
+.button-hotel-reserve {
+  background-color: var(--button-light-brown);
+}
+
+.button-hotel-reserve:hover,
+.button-hotel-reserve:focus {
+  background-color: var(--button-normal-brown);
+}
+
+.button-hotel-details:active {
+  background-color: var(--button-dark-brown);
+}
+
+.button-hotel-reserve:active {
+  background-color: var(--button-dark-brown);
+}
+
+/* Search panel */
+
+.search-panel {
+  background-image: url("../img/blur_background.jpg");
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-color: var(--basic-black);
+  color: var(--basic-white);
+  font-weight: normal;
+}
+
+.search-panel legend {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.search-panel button[type="submit"] {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  background-color: transparent;
+  border: 2px solid var(--basic-white);
+  border-radius: 2px;
+  text-transform: inherit;
+}
+
+/* Catalog filter */
+
+.catalog-filter {
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.catalog-filter b {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.catalog-filter .filter-items {
+  list-style: none;
+}
+
+.filter-item a {
+  color: var(--basic-black-transparent);
+  border-bottom: 1px dotted var(--button-light-sky);
+}
+
+.filter-item a:not([href]),
+.filter-item a:not([href]):active {
+  color: var(--button-light-sky);
+  border: 0;
+}
+
+.filter-item a:focus,
+.filter-item a:hover {
+  color: var(--button-light-sky);
+}
+
+.filter-item a:active {
+  color: var(--basic-black);
+  border: 0;
 }
