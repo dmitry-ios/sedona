@@ -50,13 +50,26 @@ img {
 }
 
 .container {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
   width: 1200px;
+  margin: 0 auto;
   background-color: var(--basic-white);
+}
+
+.page {
+  height: 100%;
+}
+
+.index-page {
+  min-height: 100%;
 }
 
 /* Navigation Panel */
 
 .user-navigation {
+  margin: 15px 72px;
+  padding: 0;
   list-style: none;
 }
 
@@ -87,32 +100,71 @@ img {
 .main-intro {
   text-align: center;
   line-height: 26px;
+  background-image: url("../img/cover.jpg");
+  background-repeat: no-repeat;
+  background-position: top left;
 }
 
 .main-intro h2 {
   font-size: 21px;
+  margin: 0;
+  margin-bottom: 16px;
+  padding: 552px 365px;
+  padding-bottom: 0;
 }
 
 .main-intro p {
   font-weight: normal;
   color: var(--basic-close-black);
+  margin: 0;
 }
 
 /* Real town block section */
+
+.general-block-wrapper {
+  width: 400px;
+  border-bottom: 1px solid transparent;
+}
 
 .general-block {
   background-color: var(--button-light-sky);
   color: white;
   font-weight: normal;
   text-align: center;
+  margin-top: 51px;
+}
+
+.real-city-block {
+  background-image: url("../img/real_city.jpg");
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+.bridge-block {
+  display: flex;
+  justify-content: flex-end;
+  background-image: url("../img/bridge.jpg");
+  background-repeat: no-repeat;
+  background-position: top left;
 }
 
 .general-block h2 {
   font-weight: bold;
   font-size: 21px;
+  margin: 0;
+  padding: 25px 120px;
+  padding-top: 47px;
+}
+
+.general-block p {
+  margin: 0;
+  padding: 0 45px;
+  padding-top: 23px;
+  padding-bottom: 52px;
 }
 
 .advantage-list {
+  display: flex;
   list-style: none;
   text-align: center;
 }
@@ -127,6 +179,7 @@ img {
 }
 
 .final-advantages {
+  display: flex;
   list-style: none;
   text-align: center;
   background-color: var(--basic-extra-light-grey);
@@ -180,6 +233,8 @@ img {
 /* Footer */
 
 .page-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   background-color: var(--basic-white-footer);
 }
 
