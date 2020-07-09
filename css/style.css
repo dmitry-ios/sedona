@@ -7,6 +7,7 @@
   --basic-dark-grey: #666666;
   --basic-light-grey: #ebebeb;
   --basic-extra-light-grey: #EEEEEE;
+  --basic-grey-transparent: rgba(0, 1, 1, 0.2);
   --basic-close-white: #f2f2f2;
   --basic-white-transparent: rgba(255, 255, 255, 0.3);
   --basic-white-footer: rgba(255, 255, 255, 0.9);
@@ -43,6 +44,21 @@ img {
   height: auto;
 }
 
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /* General */
 
 .modal {
@@ -52,9 +68,11 @@ img {
 .container {
   display: grid;
   grid-template-rows: min-content 1fr min-content;
+  align-content: start;
   width: 1200px;
   margin: 0 auto;
   background-color: var(--basic-white);
+  box-shadow: 0px 5px 15px var(--basic-grey-transparent);
 }
 
 .page {
@@ -62,15 +80,39 @@ img {
 }
 
 .index-page {
+  display: flex;
   min-height: 100%;
 }
 
 /* Navigation Panel */
 
+.main-header {
+  position: relative;
+}
+
+.logo-wrapper {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 69px);
+}
+
 .user-navigation {
+  display: flex;
   margin: 15px 72px;
   padding: 0;
   list-style: none;
+}
+
+.user-navigation li {
+  padding-right: 134px;
+}
+
+.user-navigation li:nth-child(3n) {
+  margin-left: auto;
+}
+
+.user-navigation li:nth-child(4n) {
+  padding-right: 0;
 }
 
 .user-navigation a {
@@ -146,6 +188,7 @@ img {
   background-image: url("../img/bridge.jpg");
   background-repeat: no-repeat;
   background-position: top left;
+  margin-top: 82px;
 }
 
 .general-block h2 {
@@ -165,21 +208,70 @@ img {
 
 .advantage-list {
   display: flex;
+  padding: 0;
+  margin: 0;
   list-style: none;
   text-align: center;
 }
 
+.advantage-list li {
+  flex-grow: 1;
+  position: relative;
+  padding-top: 160px;
+  padding-left: 45px;
+  padding-right: 45px;
+}
+
+.lodging::before {
+  content: "";
+  position: absolute;
+  width: 75px;
+  height: 72px;
+  background-image: url("../img/house.svg");
+  background-repeat: no-repeat;
+  top: 60px;
+  left: calc(50% - 75px / 2);
+}
+
+.food::before {
+  content: "";
+  position: absolute;
+  width: 75px;
+  height: 70px;
+  background-image: url("../img/food.svg");
+  background-repeat: no-repeat;
+  top: 60px;
+  left: calc(50% - 75px / 2);
+}
+
+.gift::before {
+  content: "";
+  position: absolute;
+  width: 64px;
+  height: 77px;
+  background-image: url("../img/gift.svg");
+  background-repeat: no-repeat;
+  top: 60px;
+  left: calc(50% - 64px / 2);
+}
+
 .advantage-list h3 {
   font-size: 21px;
+  margin-top: 0;
+  margin-bottom: 25px;
 }
 
 .advantage-list p {
   font-weight: normal;
   color: var(--basic-close-black);
+  margin: 0;
+
 }
 
 .final-advantages {
   display: flex;
+  padding: 0;
+  margin: 0;
   list-style: none;
   text-align: center;
   background-color: var(--basic-extra-light-grey);
@@ -187,10 +279,23 @@ img {
   color: var(--basic-close-black);
 }
 
+.final-advantages li {
+  flex-grow: 1;
+}
+
 .final-advantages h2 {
+  margin: 0;
+  padding: 47px 120px;
+  padding-bottom: 25px;
   font-weight: bold;
   font-size: 21px;
   color: var(--basic-black);
+}
+
+.final-advantages p {
+  margin: 0;
+  padding: 23px 55px;
+  padding-bottom: 54px;
 }
 
 /* User Interest */
@@ -202,14 +307,20 @@ img {
 
 .user-interest h2 {
   font-size: 30px;
+  margin-top: 61px;
+  margin-bottom: 36px;
 }
 
 .user-interest p {
+  margin-bottom: 40px;
   font-weight: normal;
   color: var(--basic-close-black);
 }
 
 .user-interest button {
+  display: block;
+  margin: 0 316px;
+  padding: 30px 139px;
   text-transform: inherit;
   font-family: inherit;
   font-weight: inherit;
@@ -360,6 +471,7 @@ img {
 
 .search-panel {
   background-image: url("../img/blur_background.jpg");
+  background-size: 1200px 270px;
   background-repeat: no-repeat;
   background-position: top left;
   background-color: var(--basic-black);
