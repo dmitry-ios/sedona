@@ -75,6 +75,24 @@ input[type="radio"].visually-hidden {
   box-shadow: 0px 5px 15px var(--basic-grey-transparent);
 }
 
+.map-footer {
+  grid-template-rows: min-content 1fr 120px;
+  grid-template-columns: 1200px;
+}
+
+.main-map-footer {
+  grid-row-start: 2;
+  grid-row-end: 4;
+  grid-column: 1 / -1;
+}
+
+.page-map-footer {
+  grid-row-start: 3;
+  grid-row-end: -1;
+  grid-column: 1 / -1;
+  z-index: 100;
+}
+
 .page {
   height: 100%;
 }
