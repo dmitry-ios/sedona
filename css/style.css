@@ -11,6 +11,7 @@
   --basic-light-grey: #ebebeb;
   --basic-extra-light-grey: #EEEEEE;
   --basic-grey-transparent: rgba(0, 1, 1, 0.2);
+  --basic-grey-search-form: rgba(0, 1, 1, 0.15);
   --basic-close-white: #f2f2f2;
   --basic-white-transparent: rgba(255, 255, 255, 0.3);
   --basic-white-footer: rgba(255, 255, 255, 0.9);
@@ -751,5 +752,143 @@ input[type="radio"].visually-hidden {
 
 .filter-sort-up a:not([href]):hover path,
 .filter-sort-down a:not([href]):hover path {
+  fill: var(--button-light-sky);
+}
+
+/* Search Form */
+
+.search-form {
+  position: absolute;
+
+  box-sizing: border-box;
+  width: 568px;
+  padding: 55px;
+
+  line-height: 26px;
+
+  background-color: var(--basic-white);
+  box-shadow: 0px 7px 15px var(--basic-grey-search-form);
+}
+
+.search-button {
+  width: 458px;
+  height: 58px;
+  padding: 0;
+  margin-top: 24px;
+
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: 21px;
+  line-height: inherit;
+  text-transform: inherit;
+  color: var(--basic-white);
+
+  background-color: var(--button-light-sky);
+  border: 0;
+}
+
+.search-button:focus,
+.search-button:hover {
+  background-color: var(--button-normal-sky);
+}
+
+.search-button:active {
+  color: var(--basic-white-transparent);
+
+  background-color: var(--button-dark-sky);
+}
+
+.search-form label {
+  display: inline-block;
+  width: 112px;
+}
+
+.search-form .field-children {
+  width: 68px;
+}
+
+.search-form p {
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.search-form .input-field {
+  font-weight: inherit;
+  text-transform: inherit;
+  line-height: 26px;
+
+  background-color: transparent;
+  border: 0;
+}
+
+.search-input-wrapper {
+  vertical-align: middle;
+
+  background-color: var(--basic-close-white);
+}
+
+.persons-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-persons {
+  display: inline-block;
+  width: 110px;
+
+  vertical-align: middle;
+}
+
+.input-persons input {
+  width: 38px;
+  height: 38px;
+
+  text-align: center;
+}
+
+.input-date {
+  display: inline-block;
+  height: 38px;
+  width: 342px;
+
+  vertical-align: middle;
+}
+
+.input-date input {
+  height: 30px;
+  width: 290px;
+  padding-left: 12px;
+}
+
+.input-date button {
+  margin: 0;
+  padding: 0;
+  padding-top: 4px;
+  padding-left: 9px;
+
+  background-color: transparent;
+  border: 0;
+}
+
+.input-persons button {
+  margin: 0;
+  padding: 0 10px;
+  
+  background-color: transparent;
+  border: 0;
+}
+
+.input-persons button:focus svg path,
+.input-persons button:hover svg path,
+.input-persons button:focus svg rect,
+.input-persons button:hover svg rect,
+.input-date button:focus svg path,
+.input-date button:hover svg path {
+  fill: var(--basic-black);
+}
+
+.input-persons button:active svg path,
+.input-persons button:active svg rect,
+.input-date button:active svg path {
   fill: var(--button-light-sky);
 }
