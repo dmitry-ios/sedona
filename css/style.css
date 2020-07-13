@@ -5,11 +5,11 @@
   --basic-black-transparent: rgba(0, 0, 0, 0.3);
   --basic-close-black: #333333;
   --basic-dark-grey: #666666;
-  --basic-grey: #BDBBBC;
-  --basic-grey-normal: #CACACA;
-  --basic-grey-border: #E5E5E5;
+  --basic-grey: #bdbbbc;
+  --basic-grey-normal: #cacaca;
+  --basic-grey-border: #e5e5e5;
   --basic-light-grey: #ebebeb;
-  --basic-extra-light-grey: #EEEEEE;
+  --basic-extra-light-grey: #eeeeee;
   --basic-grey-transparent: rgba(0, 1, 1, 0.2);
   --basic-grey-search-form: rgba(0, 1, 1, 0.15);
   --basic-close-white: #f2f2f2;
@@ -85,6 +85,8 @@ input[type="radio"].visually-hidden {
 }
 
 .main-map-footer {
+  position: relative;
+
   grid-row-start: 2;
   grid-row-end: 4;
   grid-column: 1 / -1;
@@ -114,6 +116,7 @@ input[type="radio"].visually-hidden {
 
 .logo-wrapper {
   position: absolute;
+  z-index: 9999;
   top: 0;
   left: calc(50% - 69px);
 }
@@ -287,7 +290,6 @@ input[type="radio"].visually-hidden {
   font-weight: normal;
   color: var(--basic-close-black);
   margin: 0;
-
 }
 
 .final-advantages {
@@ -520,15 +522,15 @@ input[type="radio"].visually-hidden {
 }
 
 .two-stars {
-  width: calc(2 * (19px + 5px/2));
+  width: calc(2 * (19px + 5px / 2));
 }
 
 .three-stars {
-  width: calc(3 * (19px + 5px/2));
+  width: calc(3 * (19px + 5px / 2));
 }
 
 .four-stars {
-  width: calc(4 * (19px + 5px/2));
+  width: calc(4 * (19px + 5px / 2));
 }
 
 .hotel-items h3 {
@@ -572,7 +574,7 @@ input[type="radio"].visually-hidden {
   padding: 3px 17px;
 
   font-weight: bold;
-  
+
   color: var(--basic-white);
 }
 
@@ -759,6 +761,7 @@ input[type="radio"].visually-hidden {
 
 .search-form {
   position: absolute;
+  left: calc((100% - 568px) / 2);
 
   box-sizing: border-box;
   width: 568px;
@@ -840,7 +843,7 @@ input[type="radio"].visually-hidden {
 }
 
 .input-persons input {
-  width: 38px;
+  width: 36px;
   height: 38px;
 
   text-align: center;
@@ -873,7 +876,7 @@ input[type="radio"].visually-hidden {
 .input-persons button {
   margin: 0;
   padding: 0 10px;
-  
+
   background-color: transparent;
   border: 0;
 }
