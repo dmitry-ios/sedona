@@ -625,7 +625,16 @@ input[type="radio"].visually-hidden {
 .search-panel ul {
   list-style: none;
   margin: 0;
+  margin-top: 25px;
   padding: 0;
+}
+
+.search-panel li {
+  margin-bottom: 25px;
+}
+
+.search-panel li:last-child {
+  margin-bottom: 0;
 }
 
 .search-panel legend {
@@ -634,6 +643,9 @@ input[type="radio"].visually-hidden {
 }
 
 .search-panel fieldset {
+  margin: 0;
+  padding: 0;
+
   border: 0;
 }
 
@@ -650,7 +662,49 @@ input[type="radio"].visually-hidden {
 
 .search-panel form {
   display: grid;
-  grid-template-columns: 326px 474px 327px;
+  grid-template-columns: 326px 1fr 327px;
+  padding-top: 26px;
+  padding-bottom: 31px;
+  padding-left: 72px;
+  padding-right: 72px;
+}
+
+.list-checkboxes label {
+  position: relative;
+
+  padding-left: 40px;
+}
+
+.filter-input-checkbox + label::before {
+  position: absolute;
+  top: -4px;
+  left: 0;
+
+  width: 23px;
+  height: 23px;
+
+  content: "";
+  background-image: url("../img/checkbox_off.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.filter-input-checkbox:checked + label::before {
+  display: none;
+}
+
+.filter-input-checkbox:checked + label::after {
+  position: absolute;
+  top: -4px;
+  left: 0;
+
+  width: 27px;
+  height: 23px;
+
+  content: "";
+  background-image: url("../img/checkbox_on.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;  
 }
 
 /* Catalog filter */
