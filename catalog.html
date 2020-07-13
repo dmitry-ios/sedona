@@ -106,22 +106,28 @@
             </fieldset>
             <fieldset>
               <legend>Стоимость в сутки (Р):</legend>
-              <label for="field-cost-from">От</label>
-              <input
-                id="field-cost-from"
-                type="text"
-                name="cost-from"
-                placeholder="0"
-              />
-              <label for="field-cost-to">До</label>
-              <input
-                id="field-cost-to"
-                type="text"
-                name="cost-to"
-                placeholder="3000"
-              />
+              <div class="filter-cost-field-wrapper">
+                <div class="filter-cost-from-inner">
+                  <label for="field-cost-from">От</label>
+                  <input
+                    id="field-cost-from"
+                    type="text"
+                    name="cost-from"
+                    placeholder="0"
+                  />
+                </div>
+                <div class="filter-cost-to-inner">
+                  <label for="field-cost-to">До</label>
+                  <input
+                    id="field-cost-to"
+                    type="text"
+                    name="cost-to"
+                    placeholder="3000"
+                  />
+                </div>
+              </div>
               <!-- Здесь будет кастомный двойной рендж контрол -->
-              <button type="submit">Показать</button>
+              <button class="show-filter-button" type="submit">Показать</button>
             </fieldset>
           </form>
         </section>

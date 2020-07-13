@@ -660,6 +660,63 @@ input[type="radio"].visually-hidden {
   text-transform: inherit;
 }
 
+.show-filter-button {
+  padding-top: 8px;
+  padding-bottom: 7px;
+  padding-left: 36px;
+  padding-right: 35px;
+}
+
+.search-panel button[type="submit"]:focus,
+.search-panel button[type="submit"]:hover {
+  color: var(--basic-black);
+
+  background-color: var(--basic-white);
+}
+
+.filter-cost-field-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 11px;
+  padding: 4px 0;
+
+  border: 2px solid var(--basic-white);
+  border-radius: 2px;
+}
+
+.filter-cost-field-wrapper .filter-cost-to-inner:last-child {
+  position: relative;
+}
+
+.filter-cost-field-wrapper .filter-cost-to-inner:last-child::before {
+  position: absolute;
+  left: 0;
+  top: 1px;
+
+  width: 2px;
+  height: 22px;
+  
+  content: "";
+  
+  background-color: var(--basic-white);
+}
+
+.filter-cost-field-wrapper label {
+  padding-left: 51px;
+}
+
+.filter-cost-field-wrapper input {
+  width: 72px;
+
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+
+  border: 0;
+  background-color: transparent;
+}
+
 .search-panel form {
   display: grid;
   grid-template-columns: 326px 1fr 327px;
