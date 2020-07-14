@@ -126,8 +126,30 @@
                   />
                 </div>
               </div>
-              <!-- Здесь будет кастомный двойной рендж контрол -->
-              <button class="show-filter-button" type="submit">Показать</button>
+              
+              <div class="range-controls">
+                <div class="range-controls-scale">
+                  <div class="range-controls-bar" style="width: 30%; margin-left: 20%;">
+                    <span class="visually-hidden">
+                      Текущий диапазон цен.
+                    </span>
+                  </div>
+                </div>
+                <div class="toggle toggle-min" tabindex="0" style="left: calc(20% - 6px);">
+                  <span class="visually-hidden">
+                    Указать минимальную цену.
+                  </span>
+                </div>
+                <div class="toggle toggle-max" tabindex="0" style="left: calc(50% - 6px);">
+                  <span class="visually-hidden">
+                    Указать максимальную цену.
+                  </span>
+                </div>
+              </div>
+
+
+                <button class="show-filter-button" type="submit">Показать</button>
+
             </fieldset>
           </form>
         </section>

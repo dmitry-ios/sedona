@@ -661,6 +661,9 @@ input[type="radio"].visually-hidden {
 }
 
 .show-filter-button {
+  display: block;
+  margin: 0 auto;
+  margin-top: 22px;
   padding-top: 8px;
   padding-bottom: 7px;
   padding-left: 36px;
@@ -1005,4 +1008,56 @@ input[type="radio"].visually-hidden {
 .input-persons button:active svg rect,
 .input-date button:active svg path {
   fill: var(--button-light-sky);
+}
+
+/* Custom range controls */
+
+.range-controls {
+  position: relative;
+
+  height: 13px;
+  padding-top: 11px;
+  margin-top: 10px;
+}
+
+.range-controls .range-controls-scale {
+  height: 2px;
+
+  background-color: var(--basic-white-transparent);
+}
+
+.range-controls .range-controls-bar {
+  width: 78%;
+  height: 2px;
+
+  background-color: var(--basic-white);
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 23px;
+  height: 24px;
+
+  background-image: url("../img/filter_button_normal.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: -2px;
+}
+
+.range-controls .toggle-max {
+  left: 246px;
+}
+
+.range-controls .toggle-min:focus,
+.range-controls .toggle-max:focus,
+.range-controls .toggle-min:hover,
+.range-controls .toggle-max:hover {
+  background-image: url("../img/filter_button_big.svg");
 }
